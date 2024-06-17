@@ -1,0 +1,98 @@
+/* navbar code here */
+nav {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.logo {
+    display: inline-block;
+}
+
+nav ul {
+    display: flex;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    margin: 20px 50px 0 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #2a2a2a;
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.login-btn{
+    padding: 8px 12px;
+    font-weight: normal;
+    border-radius: 2px;
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        top: 95px;
+        transform: translateY(-2000px);
+        background-color: #333333f3;
+        text-align: center;
+        width: 86%;
+        z-index: 99;
+        transition: transform ease 1s;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu li {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    #menu li a {
+        color: #fff;
+    }
+
+    .menu-icon i {
+        font-size: 24px;
+    }
+
+    .active {
+        display: flex !important;
+        transform: translateY(0);
+    }
+
+    .login-btn{
+        display: block;
+        background: #fff;
+        color: #2a2a2a !important;
+    }
+}

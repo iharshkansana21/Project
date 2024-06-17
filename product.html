@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexaShop - Product Detail Page</title>
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="assets/image/logo.png" alt="LOGO"></a>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars">&#9776;</i>
+            </div>
+
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#mens-sec">Men's</a></li>
+                <li><a href="index.html#womens-sec">Women's</a></li>
+                <li><a href="index.html#kids-sec">Kid's</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-image">
+            <img src="assets/image/women1.jpg" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h1>Spring Collection</h1>
+            <p class="price">Rs.1499</p>
+            <p class="description">As the winter chill fades and the flowers begin to bloom, it’s time to refresh your
+                wardrobe with vibrant, light, and stylish pieces from our latest Spring Collection.</p>
+            <p class="quote"> <strong>"Layered in love, wrapped in the warmth of spring."</strong></p>
+
+            <div class="order-quantity">
+                <label for="quantity">No. of Orders</label>
+                <div class="quantity-controls">
+                    <button id="decrease">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button id="increase">+</button>
+                </div>
+            </div>
+
+            <button class="add-to-cart">Add To Cart</button>
+        </div>
+    </main>
+    <script src="assets/js/product.js"></script>
+</body>
+
+</html>

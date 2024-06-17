@@ -1,0 +1,181 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+}
+
+.grid {
+    height: 300px;
+    margin: 10px;
+}
+
+#Hexa {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 620px;
+}
+
+#Hexa::before {
+    background: url('../image/mainwomen.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+#Hexa:hover::before,
+#mens:hover::before,
+#womens:hover::before,
+#kids:hover::before,
+#accesseries:hover::before {
+    scale: 1.1;
+}
+
+#mens::before {
+    background: url('../image/men1.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+#womens::before {
+    background: url('../image/women8.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+#kids::before {
+    background: url('../image/kid2.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+#accesseries::before {
+    background: url('../image/pic9.jpg') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+.grid h1, .grid span {
+    text-align: center;
+}
+
+#Hexa h1 {
+    text-align: left;
+    font-size: 56px;
+    letter-spacing: 2px;
+    margin: 0 13px;
+}
+
+#Hexa span {
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 1px;
+    margin: 13px;
+}
+
+#Hexa,
+#mens,
+#womens,
+#kids,
+#accesseries {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.button a:hover {
+    background-color: white;
+    color: #2a2a2a;
+}
+
+.button a {
+    font-size: 18px;
+    padding: 10px 20px;
+    /*margin: 18px;*/
+    border: 1px solid white;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #Hexa {
+        grid-column: span 2;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+        height: 250px;
+    }
+
+    #Hexa {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .grid h1 {
+        font-size: 24px;
+    }
+
+    #Hexa h1 {
+        font-size: 36px;
+    }
+
+    .button a {
+        font-size: 16px;
+    }
+}
